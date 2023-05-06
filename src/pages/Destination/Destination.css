@@ -1,0 +1,194 @@
+#destination {
+    background: url("../../assets/destination/background-destination-mobile.jpg");
+    /* height: 100vh; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.box__1 {
+    text-align: center;
+    padding: 1rem;
+    padding-top: 5rem;
+}
+
+.box__1 p:not(span) {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.box__1 p span {
+    color: gray;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.box__1 img {
+    margin: 2rem 0 2rem 0;
+}
+
+.planet__types {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.planet__types li {
+    list-style: none;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+.box__1>img {
+    animation: rotate 100s linear infinite;
+}
+
+.box__2 {
+    padding: 1rem;
+    text-align: center;
+}
+
+.box__2 h1 {
+    font-size: 4em;
+    text-transform: uppercase;
+}
+
+.box__2 p {
+    line-height: 1.5;
+}
+
+.box__3 {
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+.box__3 h1 {
+    margin-top: 1.8rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.box__3 h1 span {
+    display: block;
+    color: gray;
+    font-size: 16px;
+}
+
+.box__3::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.653);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.active__planet {
+    border-bottom: 2px solid white;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Media query for desktop */
+
+@media screen and (min-width: 992px) {
+
+    #destination {
+        height: 100vh;
+        /* padding-top: 2rem; */
+        background: url("../../assets/destination/background-destination-desktop.jpg");
+    }
+
+    .main__parent {
+        display: flex;
+        justify-content: center;
+        max-height: 100vh;
+    }
+
+    .box__1 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box__1 p {
+        margin-top: 100px;
+        margin-left: -130px;
+    }
+
+    .box__1 img {
+        height: 400px;
+        width: 400px;
+        display: inline-block;
+        margin-top: 50px;
+        margin-left: 150px;
+    }
+
+    .box__2 {
+        width: 50%;
+        /* overflow: hidden; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        margin-top: 10rem;
+    }
+
+    .box__2>p {
+        width: 57%;
+        /* margin-bottom: 2rem; */
+    }
+
+    .planet__types {
+        /* border: 1px solid red; */
+        justify-content: flex-start;
+    }
+
+    .planet__types li {
+        cursor: pointer;
+    }
+
+    .box__3 {
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        /* border: 1px solid white; */
+        gap: 100px;
+    }
+
+    .box__3 h1 {
+        font-weight: lighter;
+    }
+
+    .box__3 h1 span {
+        font-weight: bold;
+    }
+
+    .box__3::after {
+        left: 30%;
+        width: 60%;
+    }
+}

@@ -1,0 +1,146 @@
+#home {
+    background: url(../../assets/home/background-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.home__main__parent {
+    /* min-height: 89.5vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.home__left {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.home__left p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-top: 4rem;
+}
+
+.home__left__main__para {
+    text-transform: uppercase;
+}
+
+.home__left h1 {
+    font-size: 4em;
+    text-transform: uppercase;
+    margin: 1rem 0 1rem 0;
+}
+
+.home__right {
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.home__right__circle {
+    position: relative;
+    color: black;
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    text-transform: uppercase;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.home__right__circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.231);
+    z-index: -1;
+    /* opacity: 0.1; */
+    transition: all 0.5s ease;
+}
+
+
+
+.home__right__circle:hover::before {
+    transform: scale(1.5);
+    transition: all 0.5s ease;
+}
+
+
+@media screen and (min-width: 992px) {
+    #home {
+        background: url(../../assets/home/background-home-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 2rem;
+    }
+
+    .home__main__parent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 80vh;
+        position: relative;
+    }
+
+    .home__left {
+        /* border: 1px solid red; */
+        width: 50%;
+        text-align: left;
+        position: absolute;
+        left: 10%;
+        top: 35%;
+    }
+
+    .home__left__main__para {
+        letter-spacing: 5px;
+    }
+
+
+    .home__left h1 {
+        font-size: 8em;
+        margin: 0;
+    }
+
+    .home__left h1~p {
+        width: 55%;
+        line-height: 1.5;
+    }
+
+    .home__right {
+        /* margin-bottom: 150px; */
+        position: absolute;
+        right: 20%;
+        top: 50%;
+    }
+
+    .home__right__circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .home__right__circle p {
+        font-size: 2em;
+    }
+
+    .home__right__circle:hover {
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease;
+    }
+}
